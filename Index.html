@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Play11jersey premium football jerseys for fans, players, teams, schools and colleges." />
+  <title>Play11jersey | Premium Football Jerseys</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#070707;
+      --panel:#111111;
+      --panel-2:#171717;
+      --gold:#d4af37;
+      --gold-2:#f5d76e;
+      --text:#ffffff;
+      --muted:#b8b8b8;
+      --line:rgba(255,255,255,.10);
+      --danger:#ff4d4d;
+      --success:#3bd671;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:22px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Inter",sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,.10), transparent 25%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    img{
+      display:block;
+      width:100%;
+    }
+
+    button,
+    input,
+    textarea,
+    select{
+      font:inherit;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1180px, 92%);
+      margin:auto;
+    }
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:48px;
+    }
+
+    .section-title span{
+      color:var(--gold);
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-size:.85rem;
+    }
+
+    .section-title h2{
+      font-family:"Bebas Neue",sans-serif;
+      font-size:clamp(2.6rem, 6vw, 4.7rem);
+      letter-spacing:1px;
+      line-height:1;
+      margin-top:8px;
+    }
+
+    .section-title p{
+      color:var(--muted);
+      max-width:650px;
+      margin:16px auto 0;
+    }
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+      backdrop-filter:blur(16px);
+      background:rgba(7,7,7,.78);
+      border-bottom:1px solid var(--line);
+    }
+
+    .navbar{
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      font-size:1.2rem;
+    }
+
+    .logo-mark{
+      width:40px;
+      height:40px;
+      border:2px solid var(--gold);
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      color:var(--gold);
+      font-family:"Bebas Neue",sans-serif;
+      font-size:1.4rem;
+      transform:rotate(-4deg);
+      box-shadow:0 0 24px rgba(212,175,55,.18);
+    }
+
+    .logo strong{
+      color:var(--gold);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      color:#ddd;
+      font-weight:600;
+      font-size:.95rem;
+      transition:.25s;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .cart-btn,
+    .menu-btn{
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:white;
+      border-radius:12px;
+      min-width:44px;
+      height:44px;
+      cursor:pointer;
+      position:relative;
+    }
+
+    .cart-count{
+      position:absolute;
+      top:-7px;
+      right:-7px;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      background:var(--gold);
+      color:#000;
+      font-weight:900;
+      font-size:.75rem;
+      display:grid;
+      place-items:center;
+    }
+
+    .menu-btn{
+      display:none;
+      font-size:1.2rem;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      padding-top:74px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      background:
+        linear-gradient(90deg, rgba(7,7,7,.97) 0%, rgba(7,7,7,.84) 42%, rgba(7,7,7,.22) 100%),
+        url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, var(--bg) 0%, transparent 30%);
+      pointer-events:none;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:1;
+      width:min(760px, 100%);
+      padding:80px 0;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border:1px solid rgba(212,175,55,.35);
+      background:rgba(212,175,55,.08);
+      color:var(--gold-2);
+      border-radius:999px;
+      font-weight:700;
+      font-size:.85rem;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-family:"Bebas Neue",sans-serif;
+      font-size:clamp(4.4rem, 10vw, 8.5rem);
+      line-height:.88;
+      letter-spacing:1px;
+    }
+
+    .hero h1 span{
+      color:var(--gold);
+    }
+
+    .hero p{
+      max-width:620px;
+      color:#d0d0d0;
+      font-size:1.08rem;
+      margin:24px 0 30px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      border:none;
+      border-radius:14px;
+      padding:14px 22px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.25s;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--gold), var(--gold-2));
+      color:#080808;
+      box-shadow:0 14px 34px rgba(212,175,55,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 42px rgba(212,175,55,.30);
+    }
+
+    .btn-outline{
+      color:white;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .btn-outline:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+    }
+
+    .hero-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:34px;
+      margin-top:42px;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.6rem;
+      color:var(--gold);
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.85rem;
+    }
+
+    /* TRUST BAR */
+    .trust-bar{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:#0c0c0c;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+    }
+
+    .trust-item{
+      padding:24px 16px;
+      text-align:center;
+      border-right:1px solid var(--line);
+    }
+
+    .trust-item:last-child{
+      border-right:none;
+    }
+
+    .trust-item strong{
+      display:block;
+      color:var(--gold);
+      margin-bottom:3px;
+    }
+
+    .trust-item span{
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    /* PRODUCTS */
+    .filters{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:34px;
+    }
+
+    .filter-btn{
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:#ddd;
+      padding:10px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover{
+      background:var(--gold);
+      color:#000;
+      border-color:var(--gold);
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:22px;
+    }
+
+    .product-card{
+      background:linear-gradient(180deg, #161616, #0f0f0f);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      transition:.3s;
+      position:relative;
+    }
+
+    .product-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(212,175,55,.45);
+      box-shadow:var(--shadow);
+    }
+
+    .product-image{
+      aspect-ratio:4/4.5;
+      overflow:hidden;
+      background:#202020;
+      position:relative;
+    }
+
+    .product-image img{
+      height:100%;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .product-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .badge{
+      position:absolute;
+      top:14px;
+      left:14px;
+      background:var(--gold);
+      color:#000;
+      font-weight:900;
+      font-size:.75rem;
+      padding:7px 10px;
+      border-radius:999px;
+    }
+
+    .product-info{
+      padding:18px;
+    }
+
+    .product-info small{
+      color:var(--gold);
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .product-info h3{
+      margin:5px 0 8px;
+      font-size:1.08rem;
+    }
+
+    .rating{
+      color:#f7cf53;
+      font-size:.85rem;
+      margin-bottom:12px;
+    }
+
+    .price-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .price{
+      font-size:1.35rem;
+      font-weight:900;
+    }
+
+    .price del{
+      color:#777;
+      font-size:.85rem;
+      margin-left:6px;
+      font-weight:500;
+    }
+
+    .add-btn{
+      border:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background:var(--gold);
+      color:#000;
+      font-weight:900;
+      font-size:1.2rem;
+      cursor:pointer;
+      transition:.2s;
+    }
+
+    .add-btn:hover{
+      transform:scale(1.08);
+    }
+
+    /* FEATURE */
+    .feature-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .feature-image{
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .feature-image img{
+      min-height:520px;
+      object-fit:cover;
+    }
+
+    .feature-copy h2{
+      font-family:"Bebas Neue",sans-serif;
+      font-size:clamp(3rem, 6vw, 5rem);
+      line-height:1;
+    }
+
+    .feature-copy h2 span{
+      color:var(--gold);
+    }
+
+    .feature-copy p{
+      color:var(--muted);
+      margin:20px 0;
+    }
+
+    .feature-list{
+      display:grid;
+      gap:14px;
+      margin:26px 0 30px;
+    }
+
+    .feature-list li{
+      list-style:none;
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+
+    .feature-list b{
+      color:var(--gold);
+    }
+
+    /* REVIEWS */
+    .review-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .review-card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+    }
+
+    .review-card p{
+      color:#d5d5d5;
+      margin:14px 0 20px;
+    }
+
+    .review-user{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .avatar{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#6f5412);
+      display:grid;
+      place-items:center;
+      color:#000;
+      font-weight:900;
+    }
+
+    .review-user span{
+      display:block;
+      color:var(--muted);
+      font-size:.85rem;
+    }
+
+    /* CONTACT */
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:30px;
+      background:linear-gradient(135deg,#171717,#0d0d0d);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:34px;
+    }
+
+    .contact-info{
+      padding:20px;
+    }
+
+    .contact-info h3{
+      font-family:"Bebas Neue",sans-serif;
+      font-size:3.2rem;
+      line-height:1;
+      margin-bottom:16px;
+    }
+
+    .contact-info p{
+      color:var(--muted);
+      margin-bottom:24px;
+    }
+
+    .contact-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .contact-list div{
+      padding:14px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:14px;
+    }
+
+    .contact-form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .contact-form .full{
+      grid-column:1/-1;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select{
+      width:100%;
+      border:1px solid var(--line);
+      background:#0b0b0b;
+      color:white;
+      padding:14px 15px;
+      border-radius:13px;
+      outline:none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus{
+      border-color:var(--gold);
+    }
+
+    .contact-form textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+
+    /* CART PANEL */
+    .cart-panel{
+      position:fixed;
+      top:0;
+      right:-420px;
+      width:min(420px, 100%);
+      height:100vh;
+      z-index:2000;
+      background:#0d0d0d;
+      border-left:1px solid var(--line);
+      transition:.35s;
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .cart-panel.open{
+      right:0;
+    }
+
+    .cart-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding-bottom:18px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .close-cart{
+      border:none;
+      background:transparent;
+      color:white;
+      font-size:1.6rem;
+      cursor:pointer;
+    }
+
+    .cart-items{
+      flex:1;
+      overflow:auto;
+      padding:20px 0;
+      display:grid;
+      gap:12px;
+      align-content:start;
+    }
+
+    .cart-item{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    .cart-item small{
+      color:var(--muted);
+    }
+
+    .remove-item{
+      border:none;
+      background:transparent;
+      color:var(--danger);
+      cursor:pointer;
+      font-weight:800;
+    }
+
+    .cart-total{
+      border-top:1px solid var(--line);
+      padding-top:18px;
+    }
+
+    .cart-total-row{
+      display:flex;
+      justify-content:space-between;
+      font-size:1.2rem;
+      font-weight:900;
+      margin-bottom:14px;
+    }
+
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.65);
+      z-index:1500;
+      opacity:0;
+      visibility:hidden;
+      transition:.3s;
+    }
+
+    .overlay.show{
+      opacity:1;
+      visibility:visible;
+    }
+
+    /* TOAST */
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:26px;
+      transform:translate(-50%, 120px);
+      background:var(--success);
+      color:#041309;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      z-index:3000;
+      transition:.3s;
+    }
+
+    .toast.show{
+      transform:translate(-50%, 0);
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--line);
+      background:#050505;
+      padding:34px 0;
+      color:var(--muted);
+    }
+
+    .footer-wrap{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .product-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .feature-wrap,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .review-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        position:absolute;
+        left:0;
+        top:74px;
+        width:100%;
+        padding:20px 4%;
+        background:#0b0b0b;
+        border-bottom:1px solid var(--line);
+        flex-direction:column;
+        align-items:flex-start;
+        display:none;
+      }
+
+      .nav-links.open{
+        display:flex;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .trust-item:nth-child(2){
+        border-right:none;
+      }
+
+      .trust-item:nth-child(-n+2){
+        border-bottom:1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 600px){
+      .section{
+        padding:70px 0;
+      }
+
+      .hero{
+        background-position:64% center;
+      }
+
+      .hero h1{
+        font-size:4.5rem;
+      }
+
+      .product-grid{
+        grid-template-columns:1fr;
+      }
+
+      .contact-form{
+        grid-template-columns:1fr;
+      }
+
+      .contact-wrap{
+        padding:18px;
+      }
+
+      .hero-stats{
+        gap:20px;
+      }
+
+      .logo span{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">
+        <div class="logo-mark">P11</div>
+        <span>PLAY<strong>11</strong>JERSEY</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Jerseys</a></li>
+        <li><a href="#custom">Custom Orders</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart" aria-label="Open cart">
+          🛒
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">⚽ Premium Football Wear</div>
+          <h1>Wear The <span>Passion.</span><br>Own The Game.</h1>
+          <p>
+            Premium football jerseys for fans, players, colleges, schools and teams.
+            Custom names, numbers and bulk orders available.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">Shop Jerseys</a>
+            <a href="#contact" class="btn btn-outline">Custom Order</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>500+</strong>
+              <span>Happy Customers</span>
+            </div>
+            <div class="stat">
+              <strong>30+</strong>
+              <span>Teams Available</span>
+            </div>
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Customer Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>Premium Dri-Fit</strong>
+          <span>Comfortable sports fabric</span>
+        </div>
+        <div class="trust-item">
+          <strong>Custom Printing</strong>
+          <span>Name and number available</span>
+        </div>
+        <div class="trust-item">
+          <strong>Bulk Orders</strong>
+          <span>Schools, colleges and teams</span>
+        </div>
+        <div class="trust-item">
+          <strong>Fast Support</strong>
+          <span>Easy order assistance</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-title">
+          <span>Trending Collection</span>
+          <h2>Premium Jerseys</h2>
+          <p>Choose your team, select your size and add a custom name or number.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="international">International</button>
+          <button class="filter-btn" data-filter="club">Club</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="international">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=900&q=80" alt="Argentina football jersey">
+              <span class="badge">Best Seller</span>
+            </div>
+            <div class="product-info">
+              <small>International</small>
+              <h3>Argentina Home Jersey</h3>
+              <div class="rating">★★★★★ (48)</div>
+              <div class="price-row">
+                <div class="price">₹799 <del>₹1,199</del></div>
+                <button class="add-btn" data-name="Argentina Home Jersey" data-price="799">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="international">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=900&q=80" alt="Brazil football jersey">
+              <span class="badge">New</span>
+            </div>
+            <div class="product-info">
+              <small>International</small>
+              <h3>Brazil Home Jersey</h3>
+              <div class="rating">★★★★★ (36)</div>
+              <div class="price-row">
+                <div class="price">₹799 <del>₹1,199</del></div>
+                <button class="add-btn" data-name="Brazil Home Jersey" data-price="799">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="international">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Portugal football jersey">
+            </div>
+            <div class="product-info">
+              <small>International</small>
+              <h3>Portugal Home Jersey</h3>
+              <div class="rating">★★★★★ (41)</div>
+              <div class="price-row">
+                <div class="price">₹849 <del>₹1,249</del></div>
+                <button class="add-btn" data-name="Portugal Home Jersey" data-price="849">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="international">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=900&q=80" alt="France football jersey">
+            </div>
+            <div class="product-info">
+              <small>International</small>
+              <h3>France Home Jersey</h3>
+              <div class="rating">★★★★☆ (28)</div>
+              <div class="price-row">
+                <div class="price">₹799 <del>₹1,199</del></div>
+                <button class="add-btn" data-name="France Home Jersey" data-price="799">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="club">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=900&q=80" alt="Real Madrid football jersey">
+              <span class="badge">Popular</span>
+            </div>
+            <div class="product-info">
+              <small>Club</small>
+              <h3>Real Madrid Home Jersey</h3>
+              <div class="rating">★★★★★ (52)</div>
+              <div class="price-row">
+                <div class="price">₹899 <del>₹1,299</del></div>
+                <button class="add-btn" data-name="Real Madrid Home Jersey" data-price="899">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="club">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1624880357913-a8539238245b?auto=format&fit=crop&w=900&q=80" alt="Barcelona football jersey">
+            </div>
+            <div class="product-info">
+              <small>Club</small>
+              <h3>Barcelona Home Jersey</h3>
+              <div class="rating">★★★★★ (44)</div>
+              <div class="price-row">
+                <div class="price">₹899 <del>₹1,299</del></div>
+                <button class="add-btn" data-name="Barcelona Home Jersey" data-price="899">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="club">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=80" alt="Arsenal football jersey">
+            </div>
+            <div class="product-info">
+              <small>Club</small>
+              <h3>Arsenal Home Jersey</h3>
+              <div class="rating">★★★★☆ (31)</div>
+              <div class="price-row">
+                <div class="price">₹849 <del>₹1,249</del></div>
+                <button class="add-btn" data-name="Arsenal Home Jersey" data-price="849">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="club">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?auto=format&fit=crop&w=900&q=80" alt="Manchester football jersey">
+            </div>
+            <div class="product-info">
+              <small>Club</small>
+              <h3>Manchester Home Jersey</h3>
+              <div class="rating">★★★★★ (39)</div>
+              <div class="price-row">
+                <div class="price">₹849 <del>₹1,249</del></div>
+                <button class="add-btn" data-name="Manchester Home Jersey" data-price="849">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="custom">
+      <div class="container feature-wrap">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=1200&q=85" alt="Custom football jersey printing">
+        </div>
+
+        <div class="feature-copy">
+          <div class="eyebrow">Custom Team Orders</div>
+          <h2>Your Team. Your Name. <span>Your Jersey.</span></h2>
+          <p>
+            Order customized football jerseys for college teams, school teams,
+            local clubs, tournaments and fan groups.
+          </p>
+
+          <ul class="feature-list">
+            <li><b>✓</b> Custom player name and number</li>
+            <li><b>✓</b> Team logo printing</li>
+            <li><b>✓</b> Sizes from S to XXL</li>
+            <li><b>✓</b> Special price for bulk orders</li>
+            <li><b>✓</b> Premium Dri-Fit material</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary">Request Bulk Price</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-title">
+          <span>Customer Love</span>
+          <h2>What Players Say</h2>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="rating">★★★★★</div>
+            <p>"The fabric quality is excellent and the custom name printing looks very clean. Perfect for our college team."</p>
+            <div class="review-user">
+              <div class="avatar">AK</div>
+              <div>
+                <strong>Arman Khan</strong>
+                <span>College Player</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="rating">★★★★★</div>
+            <p>"Good fitting, fast response and premium-looking packaging. The jersey feels comfortable during matches."</p>
+            <div class="review-user">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Rahul Sharma</strong>
+                <span>Football Fan</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="rating">★★★★★</div>
+            <p>"We ordered jerseys for our local tournament. The bulk pricing was fair and every size arrived correctly."</p>
+            <div class="review-user">
+              <div class="avatar">SZ</div>
+              <div>
+                <strong>Sameer Zaidi</strong>
+                <span>Team Captain</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <div class="eyebrow">Order Enquiry</div>
+            <h3>Let’s Build Your Jersey.</h3>
+            <p>Send your team, size, quantity and customization details. Replace the sample contact details below with your real information.</p>
+
+            <div class="contact-list">
+              <div><strong>WhatsApp</strong><br><span>+91 98765 43210</span></div>
+              <div><strong>Email</strong><br><span>orders@play11jersey.com</span></div>
+              <div><strong>Instagram</strong><br><span>@play11jersey</span></div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="tel" id="phone" placeholder="Mobile number" required>
+            <input type="email" id="email" placeholder="Email address" required>
+            <select id="orderType" required>
+              <option value="">Select order type</option>
+              <option>Single Jersey</option>
+              <option>Custom Jersey</option>
+              <option>Bulk Team Order</option>
+            </select>
+            <textarea class="full" id="message" placeholder="Team, size, quantity, player name and number"></textarea>
+            <button class="btn btn-primary full" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div>© <span id="year"></span> Play11jersey. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#products">Products</a>
+        <a href="#custom">Custom Orders</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" id="closeCart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p style="color:#888;">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-total">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn" style="width:100%;">Order on WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast">Added to cart</div>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const productCards = document.querySelectorAll(".product-card");
+    const cartPanel = document.getElementById("cartPanel");
+    const overlay = document.getElementById("overlay");
+    const openCart = document.getElementById("openCart");
+    const closeCart = document.getElementById("closeCart");
+    const cartItemsEl = document.getElementById("cartItems");
+    const cartCountEl = document.getElementById("cartCount");
+    const cartTotalEl = document.getElementById("cartTotal");
+    const toast = document.getElementById("toast");
+    const contactForm = document.getElementById("contactForm");
+    const checkoutBtn = document.getElementById("checkoutBtn");
+
+    let cart = [];
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        productCards.forEach(card => {
+          card.style.display =
+            filter === "all" || card.dataset.category === filter ? "block" : "none";
+        });
+      });
+    });
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function openCartPanel() {
+      cartPanel.classList.add("open");
+      overlay.classList.add("show");
+    }
+
+    function closeCartPanel() {
+      cartPanel.classList.remove("open");
+      overlay.classList.remove("show");
+    }
+
+    openCart.addEventListener("click", openCartPanel);
+    closeCart.addEventListener("click", closeCartPanel);
+    overlay.addEventListener("click", closeCartPanel);
+
+    document.querySelectorAll(".add-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.dataset.name;
+        const price = Number(button.dataset.price);
+
+        const existing = cart.find(item => item.name === name);
+
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+
+        updateCart();
+        showToast(name + " added");
+      });
+    });
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function updateCart() {
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+      cartCountEl.textContent = count;
+      cartTotalEl.textContent = "₹" + total.toLocaleString("en-IN");
+
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = '<p style="color:#888;">Your cart is empty.</p>';
+        return;
+      }
+
+      cartItemsEl.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <div>
+            <strong>${item.name}</strong>
+            <small>₹${item.price} × ${item.quantity}</small>
+          </div>
+          <button class="remove-item" onclick="removeItem(${index})">Remove</button>
+        </div>
+      `).join("");
+    }
+
+    checkoutBtn.addEventListener("click", () => {
+      if (cart.length === 0) {
+        showToast("Your cart is empty");
+        return;
+      }
+
+      const orderText = cart
+        .map(item => `${item.name} x ${item.quantity}`)
+        .join(", ");
+
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+      const message = encodeURIComponent(
+        `Hello Play11jersey, I want to order: ${orderText}. Total: ₹${total}.`
+      );
+
+      // Replace the number below with your real WhatsApp number including country code.
+      window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    });
+
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const orderType = document.getElementById("orderType").value;
+      const message = document.getElementById("message").value.trim();
+
+      const whatsappMessage = encodeURIComponent(
+        `New Play11jersey enquiry:
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Order Type: ${orderType}
+Details: ${message}`
+      );
+
+      // Replace the number below with your real WhatsApp number including country code.
+      window.open(`https://wa.me/919876543210?text=${whatsappMessage}`, "_blank");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
